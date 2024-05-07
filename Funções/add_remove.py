@@ -10,7 +10,7 @@ def adicionar_item(opcao, entrada_x, entrada_y, list_comand):
     if item_selecionado != 'Comandos':
         if item_selecionado == "py.press(x)":
             x = str(entrada_x.get())
-            list_comand.insert(tk.END, f"py.press({x})")
+            list_comand.insert(tk.END, f"py.press('{x}')")
         elif item_selecionado == "py.moveTo(x,y)":
             x = int(entrada_x.get())
             y = int(entrada_y.get())
@@ -26,7 +26,7 @@ def adicionar_item(opcao, entrada_x, entrada_y, list_comand):
                 list_comand.insert(tk.END, f"py.typewrite('{x}')")
         elif opcao.get() == "py.keyDown(x)":
             x = str(entrada_x.get())
-            list_comand.insert(tk.END, f"py.keyDown({x})")
+            list_comand.insert(tk.END, f"py.keyDown('{x}')")
             
         else:
             list_comand.insert(tk.END, item_selecionado)
